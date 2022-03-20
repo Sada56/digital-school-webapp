@@ -1,0 +1,16 @@
+<div class="row mt-5">
+  <div class="col-md-4 mb-3 " ngFor="let event of certifEvents">
+
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{certifEvents.module}}</h5>
+        <p class="card-text">{{ certifEvents.duree | number }} </p>
+        <a href="#" class="btn btn-success">Valide ton certif</a>
+      </div>
+      <div class="card-footer text-muted">
+         {{certifEvents.prix | number}}
+      </div>
+    </div>
+  </div>
+  </div>
+

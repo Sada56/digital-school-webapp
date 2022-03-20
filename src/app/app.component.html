@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">DigitalScholl</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/events" routerLinkActive="active"> Formations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/certif" routerLinkActive="active"><strong>Communaute</strong></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLinkActive="active">Connexion</a>
+      <a class="nav-link"  *ngIf="!_authService.loggedIn()"  routerLink="/register" routerLinkActive="active">Inscription</a>
+      <a class="nav-link" style="cursor: pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Deconnexin</a>
+
+    </ul>
+
+  </div>
+</nav>
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>

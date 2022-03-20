@@ -1,0 +1,17 @@
+
+<div class="row mt-5">
+<div class="col-md-4 mb-3 " ngFor="let event of events">
+
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">{{events.cours}}</h5>
+      <p class="card-text">{{events.description}} </p>
+
+      <a href="#" class="btn btn-primary">Inscris-toi</a>
+    </div>
+    <div class="card-footer text-muted">
+       {{events.date | date:'shorDate'}}
+    </div>
+  </div>
+</div>
+</div>
